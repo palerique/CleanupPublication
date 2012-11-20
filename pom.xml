@@ -5,6 +5,7 @@
 	<artifactId>CleanupPublication</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>CleanupPublication</name>
+	<packaging>war</packaging>
 	<description>Forces a Cleanup in the Publications in eXo platform 3.0.10.</description>
 
 
@@ -48,6 +49,23 @@
 			</snapshots>
 		</repository>
 	</repositories>
+
+	<!-- ******************** INFORMAÇÕES DE BUILD ******************** -->
+
+	<build>
+		<finalName>uniblue</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.0.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
 
 </project>
