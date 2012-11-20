@@ -34,14 +34,25 @@ public class CleanupPublication {
 	public String Fixpublication(@PathParam("sitename") String sitename)
 			throws RepositoryException {
 
+		System.out
+				.println("**********************************************************************************************");
+		System.out.println("Searching node tree for sitename: " + sitename);
+		System.out
+				.println("**********************************************************************************************");
+
 		ManageableRepository repository = repositoryService
 				.getCurrentRepository();
+		
 		Session session = providerservice.getSessionProvider(null).getSession(
 				"collaboration", repository);
+		
 		QueryManager manager = session.getWorkspace().getQueryManager();
+		
 		String statement = "select * from nt:base where jcr:path LIKE '/sites content/live/"
 				+ sitename + "/web contents/site artifacts/%'";
+		
 		Query query = null;
+		
 		try {
 			query = manager.createQuery(statement.toString(), Query.SQL);
 		} catch (Exception e) {
