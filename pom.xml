@@ -8,7 +8,6 @@
 	<packaging>war</packaging>
 	<description>Forces a Cleanup in the Publications in eXo platform 3.0.10.</description>
 
-
 	<dependencies>
 		<dependency>
 			<groupId>javax.ws.rs</groupId>
@@ -53,7 +52,7 @@
 	<!-- ******************** INFORMAÇÕES DE BUILD ******************** -->
 
 	<build>
-		<finalName>uniblue</finalName>
+		<finalName>cleanupPublication</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
